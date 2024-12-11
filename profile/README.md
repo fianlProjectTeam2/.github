@@ -1,12 +1,89 @@
-## Hi there 👋
+# 📈 안녕하세요!
+### 실시간 주식 데이터를 활용한 모의 주식 AI 주식 전망 조회 서비스입니다.
 
-<!--
+---
 
-**Here are some ideas to get you started:**
+## 🚀 주요 기능
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+### 1️⃣ 삼성전자 관련 기사 크롤링 (Naver 기사)
+- **목적**: 삼성전자 관련 기사를 크롤링하여 GPT로 분석하고 미래 전망을 예측하는 기능 제공.
+- **크롤링 데이터**:
+  - 기사 제목
+  - 기사 내용
+  - 작성 기자
+  - 기사가 등재된 신문사
+  - 기사 업로드일
+  - 원본 링크
+
+### 2️⃣ 크롤링한 기사 뉴스레터 게시글 작성
+- **목적**: 크롤링한 삼성전자 기사를 뉴스레터 형식으로 정리하여 독자들이 쉽게 읽을 수 있도록 제공.
+- **구성 요소**:
+  - 위와 동일
+
+### 3️⃣ GPT 주가 예측 분석
+- GPT를 활용하여 인터넷 기사와 매도/매수 현황을 분석, 주가 전망 예측.
+- 두 가지 예측 방향(기사 분석, 매도/매수 분석)을 통합하여 최종 주가 전망 도출.
+
+### 4️⃣ 클라우드 연동
+- **Google Cloud Platform 무료 플랜**을 사용하여 다음 프로그램을 실행:
+  - Kafka를 활용한 삼성전자 주식 체결 현황 수신/발신 서버
+  - Naver 뉴스 크롤링 프로그램
+  - (미정) 실시간 채팅 서버
+
+### 5️⃣ 주가 알림 서비스 제공
+- 주가에 영향이 있을 만한 뉴스를 분석하여 주요 뉴스 발생 시 사용자에게 알림 제공.
+- 사용자가 설정한 주가에 도달했을 경우, 다음 알림 옵션 제공:
+  - 문자
+  - 이메일
+  - 웹페이지 알림 리스트 추가
+
+### 6️⃣ 게시판 기능
+- 회원은 다음 기능을 이용 가능:
+  - 게시글 작성, 수정, 삭제
+  - 댓글 작성 및 추천
+  - 불건전한 게시글 신고 시 관리자에게 자동 문의 전송
+- **게시글 구성 요소**:
+  - 제목, 작성자, 게시일, 수정일, 글 내용
+
+### 7️⃣ 회원 기능
+- 회원가입 후 웹사이트 이용 가능.
+- **회원가입 정보**:
+  - 아이디, 비밀번호, 이름, 성별, 생년월일
+- 회원은 관리자에게 문의를 보낼 수 있으며, 자신의 정보를 수정 가능.
+
+### 8️⃣ 관리자 기능
+- 회원 문의에 대한 답변 제공.
+- 게시글 삭제 및 회원에게 경고 알림 제공.
+- 게시글 작성 권한 및 실시간 채팅 권한 관리.
+
+### 9️⃣ 실시간 채팅 서버 (추후 구현 예정)
+- 회원 간 채팅 기능 제공.
+- 관리자는 비정상적 활동을 차단하기 위해 채팅 권한 제어 가능.
+
+### 🔟 모의 주식 투자 기능
+- 삼성전자 주식 모의 투자 기능 제공.
+- **DB 저장 항목**:
+  - 회원 계좌 금액
+  - 현재 보유 주식 코드, 주식 이름, 주식 개수
+  - 사용자 거래 내역
+- **모의 투자 특징**:
+  - 사용자가 설정한 가격에 도달하면 거래 체결.
+  - 실제 주가에 영향을 주지 않음.
+- **추가 기능**:
+  - 랭킹 시스템: 총 자산 순위에 따른 별칭 제공.
+
+### 1️⃣1️⃣ 삼성 이외 기업 주식정보 대시보드 조회 기능
+- 삼성전자 외 다양한 기업의 주식 정보를 시각적으로 조회 가능한 대시보드 제공.
+- **기능**:
+  - 실시간 주가 데이터
+  - 거래량 및 거래 금액
+  - 주요 지표 요약
+---
+
+## 📌 사용 기술
+- **Backend**: Java(Spring Boot), Node.js
+- **Frontend**: React, HTML/CSS
+- **AI/ML**: OpenAI GPT
+- **Database**: MySQL, MongoDB
+- **크롤링**: JSoup, Gson
+
